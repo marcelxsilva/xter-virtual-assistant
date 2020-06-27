@@ -5,7 +5,27 @@
   </a>
 </p>
 
-> Uma simples assistente virtual
+> Uma simples assistente virtual em Python
+
+Uma simples assitente virtual escrita em python para rodar na sua maquina, se sinta livre para contribuir e fazer melhorias.
+
+### Como definir comandos
+
+O processo é bem simples, no arquivo <code>commands.json</code> é definido todas as frases que será identificadas pelo script com suas respectivas mensagens e comandos.
+
+Exemplo:
+```json
+{
+    "phrase": "bom dia",
+    "message": "Olá, estou preparando seu ambiente de trabalho",
+    "command": "code"
+  }
+```
+Explicação
+- <code>phrase</code>: é o que será dito pelo usuário e identificado como um comando.
+- <code>message</code>: O que será pronunciado pelo script.
+- <code>command</code>: os comandos a serem executados, pode ser inserido qualquer comando usado no terminal.
+
 
 ## Author
 
