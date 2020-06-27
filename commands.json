@@ -1,0 +1,12 @@
+[
+  {
+    "phrase": "bom dia",
+    "message": "Olá, estou preparando seu ambiente de trabalho",
+    "command": "code"
+  },
+  {
+    "phrase": "boa noite",
+    "message": "acho que por hoje chega, irei encerrar todas as atividades",
+    "command": ""
+  }
+]
