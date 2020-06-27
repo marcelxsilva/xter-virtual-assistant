@@ -1,9 +1,7 @@
-from gtts import gTTS
 from pygame import mixer
+from gtts import gTTS
+import json
 import os
-
-# this method performs the conversion of text to audio.
-#  plays and then erases.
 
 
 def say(message):
@@ -14,3 +12,18 @@ def say(message):
     mixer.music.load('msg.mp3')
     mixer.music.play()
     os.popen('rm -rf msg.mp3')
+
+
+def run(command):
+    os.popen(command)
+
+
+def identifyCommand(phrase):
+    file = open('commands.json')
+
+    data = json.load(file)
+    for i in data:
+        if i["phrase"].lower() == phrase.lower():
+            say(i["message"])
+            run(os.popen(i["command"]))
+    file.close()
